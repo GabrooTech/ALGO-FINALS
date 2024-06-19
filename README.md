@@ -23,20 +23,20 @@
   ფესვის ელემენტის წაშლა და გროვის თვისებების აღდგენა.
   გროვის ძირითადი თვისების აღდგენის ალგორითმის ფსევდოკოდი ან კოდი
 
-  MAX-HEAPIFY(A, i)
-    left = 2 * i
-    right = 2 * i + 1
-    largest = i
+      MAX-HEAPIFY(A, i)
+      left = 2 * i
+      right = 2 * i + 1
+      largest = i
+      
+      if left ≤ A.size and A[left] > A[i]
+          largest = left
 
-    if left ≤ A.size and A[left] > A[i]
-        largest = left
+      if right ≤ A.size and A[right] > A[largest]
+          largest = right
 
-    if right ≤ A.size and A[right] > A[largest]
-        largest = right
-
-    if largest ≠ i
-        swap A[i] with A[largest]
-        MAX-HEAPIFY(A, largest)
+      if largest ≠ i
+          swap A[i] with A[largest]
+          MAX-HEAPIFY(A, largest)
 
   სისწრაფის შეფასება
   გროვის თივსებების აღდეგნის ალგორითმი (Heapify): O(log n)
